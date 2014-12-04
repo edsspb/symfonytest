@@ -1,0 +1,4 @@
+denis_admin_routers:
+      resource: "@DenisAdminBundle/Controller"
+      type:     annotation
+      prefix:   /admin

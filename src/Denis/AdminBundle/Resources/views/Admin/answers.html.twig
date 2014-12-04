@@ -1,0 +1,30 @@
+{% extends "DenisDTestBundle::layout.html.twig" %}
+
+{% block title %}
+    Административная панель | {% if question.getId() %}вопрос "{{ question.getName() }}" {% endif %} | ответы
+{% endblock %}
+
+{% block content %}
+	{% if error %}<p style="color: red;">{% for msg in error %} {{ msg }} {% endfor %}</p>{% endif %}
+	{% if question.getId() %}
+		<p>Редактировать ответы для вопроса "{{ question.getName() }}":</p>
+		<p><a href="{{ path('admin_tests', {'id' : question.getTests().getId(), 'qid' : question.getId()}) }}">Тест: "{{ question.getTests().getName() }}"</a></p>
+	{% endif %}
+    
+    {% if question.getAnswers()|length %}
+    	<ul>
+	    	{% for answer in question.getAnswers() %}
+	    		<li>
+	    			<a href="{{ path('admin_answers', {'id' : question.getId(), 'aid' : answer.getId()}) }}">{{ answer.getName() }} (редактировать)</a> 
+	    			<a href="{{ path('admin_delete_obj', {'obj' : 'Answers', 'id' : answer.getId(), 'pid' : question.getId()}) }}">(удалить)</a> 
+	    		</li>
+	    	{% endfor %}
+    	</ul>
+    {% endif %}
+
+    {% if question.getId() %}
+	    <p>Создать / редактировать ответ для вопроса "{{ question.getName() }}":</p>
+	    {{ form(answerform) }}
+	{% endif %}
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% stylesheets
+'../app/Resources/public/css/jquery-ui-1.10.3.custom.css'
+%}
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+{% stylesheets
+'bundles/denisdtest/css/*.css'
+filter="cssrewrite"
+%}
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+
+{% javascripts
+'../app/Resources/public/js/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js'
+'../app/Resources/public/js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js'
+'../app/Resources/public/js/jquery.mousewheel-3.0.6.pack.js'
+'../app/Resources/public/js/noconflict.js'
+'../app/Resources/public/js/jquery.browser.min.js' 
+'../app/Resources/public/js/bootstrap.js'
+'../app/Resources/public/js/jquery.easyListSplitter.js'
+'../app/Resources/public/js/jquery.validate.js'
+'../app/Resources/public/js/fotorama.js'
+'../app/Resources/public/js/hinclude.js'
+'../app/Resources/public/js/jquery.cookie.js'
+'../app/Resources/public/js/moment.js'
+'../app/Resources/public/js/jquery.scrollTo.min.js'
+'../app/Resources/public/js/raty/jquery.raty.js'
+'../app/Resources/public/js/spin.min.js'
+'../app/Resources/public/js/jquery.placeholder.js'
+'../app/Resources/public/js/jquery.form-validator.js'
+'../src/Denis/DTestBundle/Resources/public/js/js.js'
+%}
+
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}

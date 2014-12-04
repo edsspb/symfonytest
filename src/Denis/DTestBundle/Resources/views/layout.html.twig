@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        {% include 'DenisDTestBundle::cssjs.html.twig' %}
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- FOOTER -->
+            <header class="page-header">
+                {% include "DenisDTestBundle::header.html.twig" %}
+            </header><!--/.page-header-->
+            <!-- /FOOTER -->
+
+            <!-- CONTENT -->
+            <section class="content">
+                {% block content %}{% endblock %}
+            </section><!--/.content-->
+            <!-- /CONTENT -->
+
+            <!-- FOOTER -->
+            <footer class="page-footer">
+                {% include "DenisDTestBundle::footer.html.twig" %}
+            </footer><!--/.page-footer-->
+            <!-- /FOOTER -->
+        </div><!--/.wrapper-->
+    </body>
+</html>

@@ -1,0 +1,53 @@
+{% extends "DenisDTestBundle::layout.html.twig" %}
+
+{% set userTests = data[0] %}
+
+{% block title %}
+   Тест - &laquo;{{ userTests.tests.name }}&raquo;
+{% endblock %}
+
+{% block content %}
+	<p><strong>Тест:</strong> {{ userTests.tests.name }} {% if userTests.isChecked %}(проверено){% else %}<span style="color: red;">(ожидает проверки)</span>{% endif %}</p>
+	<p><strong>Попытка №:</strong> {{ userTests.attempt }}</p>
+
+	<p><strong>Ответы:</strong></p>
+	<ul>
+		{% for item in userTests.usersQuestionsAnswers %}
+			<li>
+				<strong>{{ item.questions.name }}</strong>
+				<br />
+				Ответ: 
+				{% if item.answers|length %}
+					{% if item.isValid is null %}
+						<span style="color: blue;">{{ item.answers.name }} (ожидает проверки)</span>
+					{% elseif item.isValid %}
+						<span style="color: green;">{{ item.answers.name }} (верно)</span>
+					{% else %}
+						<span style="color: red;">{{ item.answers.name }} (неверно)</span>
+					{% endif %}
+				{% elseif item.usersAnswers|length %}
+					{% for answer in item.usersAnswers %}
+						{% if answer.isValid is null %}
+							<span style="color: blue;">{{ answer.answers.name }} (ожидает проверки)</span>
+						{% elseif answer.isValid %}
+							<span style="color: green;">{{ answer.answers.name }} (верно)</span>
+						{% else %}
+							<span style="color: red;">{{ answer.answers.name }} (неверно)</span>
+						{% endif %}{% if not loop.last %}, {% endif %}
+					{% endfor %}
+				{% elseif item.comments is not null %}
+					{% if item.isValid is null %}
+						<span style="color: blue;">{{ item.comments }} (ожидает проверки)</span>
+					{% elseif item.isValid %}
+						<span style="color: green;">{{ item.comments }} (верно)</span>
+					{% else %}
+						<span style="color: red;">{{ item.comments }} (неверно)</span>
+					{% endif %}
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+
+	<p><a href="{{ path('test_main') }}">Список тестов</a></p>
+
+{% endblock %}

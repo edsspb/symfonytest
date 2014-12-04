@@ -1,0 +1,36 @@
+parameters:
+    errors:
+        remove:
+            not_found: 'Удаляемый объект не найден'
+            error: 'В процессе удаления данных произошла ошибка'
+        save:
+            answer: 'В процессе сохранения произошла ошибка. Данные не были сохранены'
+            question: 'В процессе сохранения произошла ошибка. Данные не были сохранены'
+            test: 'В процессе сохранения произошла ошибка. Данные не были сохранены'
+            not_found: 'Редактируемый объект не найден'
+
+services:
+    denis_admin.admin:
+        class: Denis\AdminBundle\Services\Admin
+        arguments: [@doctrine, @service_container, @security.context]
+
+    denis_admin.form.type.auth:
+        class: Denis\AdminBundle\Form\AuthType
+        arguments: [@session]
+        tags:
+            - { name: form.type, alias: adminform }
+
+    denis_admin.form.type.test:
+        class: Denis\AdminBundle\Form\TestType
+        tags:
+            - { name: form.type, alias: testform }
+
+    denis_admin.form.type.question:
+        class: Denis\AdminBundle\Form\QuestionType
+        tags:
+            - { name: form.type, alias: questionform }
+
+    denis_admin.form.type.answer:
+        class: Denis\AdminBundle\Form\AnswerType
+        tags:
+            - { name: form.type, alias: answerform }

@@ -1,0 +1,17 @@
+denis_admin:
+    resource: "@DenisAdminBundle/Resources/config/routing.yml"
+
+denis_d_test:
+    resource: "@DenisDTestBundle/Resources/config/routing.yml"
+
+login_check:
+    path:     /login_check
+
+admin_login_check:
+    path: /admin/login_check
+
+logout:
+    path:     /logout
+
+admin_logout:
+    path:     /admin/logout

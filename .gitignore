@@ -1,0 +1,11 @@
+/app/bootstrap*
+/web/bundles/
+/web/css/
+/web/js/
+/app/cache/*
+/app/logs/*
+/vendor/
+/app/sessions/
+/.idea/
+sftp-config.json
+Thumbs.db

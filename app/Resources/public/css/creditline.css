@@ -1,0 +1,551 @@
+.cl-button, .cl-button:visited {
+    display: inline-block;
+    padding: 2px 10px 2px;
+    color: #fff !important;
+    text-decoration: none;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer
+}
+.cl-green.cl-button, .cl-green.cl-button:visited { background-color: #91bd09; }
+.cl-green.cl-button:hover { background-color: #749a02; }
+
+.reveal-modal-bg {
+	position: absolute;
+	height: 100% auto;
+	width: 100%;
+	background: #000;
+	filter:alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+	z-index: 100;
+	display: block;
+	top: 0px;
+	left: 0px;
+}
+.reveal-modal {
+	top: 0px;
+	left: -10000px;
+	margin-left: -233px;
+	width: 472px;
+	height: 0px;
+	background: url(../bundles/tshoktrade/img/creditline/prewidget_bg.jpg) repeat-x;
+	position: absolute !important;
+	behavior: url(/creditline/css/PIE.htc);
+	z-index: 101;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	-moz-box-shadow: 0 0 50px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0 0 50px rgba(0,0,0,.4);
+	-box-shadow: 0 0 50px rgba(0,0,0,.4);
+}
+.reveal-modal.prw {
+	width: 472px;
+	height: 408px !important;
+	text-align: left;
+}
+.reveal-modal.wgt  {
+	width: 502px;
+	margin-left: -251px;
+	background: url(../bundles/tshoktrade/img/creditline/widget_bg.jpg) repeat-x;
+	height: 710px !important;
+	text-align: left;
+}
+.reveal-modal .close-reveal-modal {
+	font-size: 22px;
+	line-height: .5;
+	position: absolute;
+	top: -15px;
+	right: -25px;
+	color: #aaa;
+	text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+	font-weight: bold;
+	cursor: pointer;
+	background: url('../bundles/tshoktrade/img/creditline/close_button.png');
+	width: 37px;
+	height:37px;
+	z-index: 999;
+}
+.reveal-modal .cl_logo {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.reveal-modal .cl_logo img {
+	border: none;
+}
+.reveal-modal .cl_basket {
+	background: url('../bundles/tshoktrade/img/creditline/basket.jpg') left no-repeat;
+	padding: 15px 0px 15px 45px;
+	margin-left: 40px;
+}
+.reveal-modal  .cl_basket .cl_goods {
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 18px;
+	font-weight: bold;
+	width: 280px;
+	overflow: hidden;
+	height: 20px;
+}
+.reveal-modal .cl_basket .cl_inf {
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 12px;
+	color: #717171;
+}
+.reveal-modal .cl_inf {
+	font-weight: 100;
+}
+.reveal-modal .cl_basket .cl_price {
+	position: absolute;
+	top: 66px;
+	left: 356px;
+	background: #9fce45;
+	padding: 2px 8px;
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 16px;
+	color: #fff;
+	height: 20px;
+	width: 100px;
+	text-align: right;
+}
+.reveal-modal .cl_credit {
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 18px;
+	font-weight: 400;
+	padding: 10px 0px 0px 40px;
+}
+.reveal-modal .cl_sum {
+	background: #efefef;
+	padding: 5px;
+}
+.reveal-modal .cl_descr {
+	color: #666;
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 13px;
+	padding: 0px 10px 0px 40px;
+	line-height: 20px;
+	font-weight: 100;
+}
+.reveal-modal .cl_btn_basket {
+	background: url('../bundles/tshoktrade/img/creditline/button.png');
+	width: 130px;
+	height: 35px;
+	cursor: pointer;
+}
+.reveal-modal .cl_btn_basket:hover {
+	background: url("../bundles/tshoktrade/img/creditline/button.png") 0px 36px transparent;
+	width: 130px;
+	height: 35px;
+	cursor: pointer;
+}
+.reveal-modal .cl_btn_continue {
+	background: url("../bundles/tshoktrade/img/creditline/button.png") -130px 0px transparent;
+	cursor: pointer;
+	height: 35px;
+	width: 150px;
+}
+.reveal-modal .cl_btn_continue:hover {
+	background: url("../bundles/tshoktrade/img/creditline/button.png") -130px 36px transparent;
+	cursor: pointer;
+	height: 35px;
+	width: 150px;
+}
+.reveal-modal .cl_pre_button {
+	float: left;
+	margin-left: 35px;
+}
+.reveal-modal .cl_buttons {
+	padding-left: 45px;
+	margin-top: -10px;
+}
+.reveal-modal .cl_buttons_wgt {
+	padding-left: 120px;
+	padding-top: 0px;
+}
+.reveal-modal .cl_buttons_wgt .closing  {
+	background: url("../bundles/tshoktrade/img/creditline/submit4.gif") 60px 40px no-repeat transparent;
+	display: none;
+	width: 250px;
+	height: 70px;
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+}
+.reveal-modal .cl_buttons_wgt .closing_click{
+	display: block;
+}
+.reveal-modal .cl_buttons_wgt .submit {
+	background: url("../bundles/tshoktrade/img/creditline/request.png") -20px -90px transparent;
+	cursor: pointer;
+	display: block;
+	height: 50px;
+	width: 210px;
+	margin: 20px 0px 0px 20px;
+}
+.reveal-modal .cl_buttons_wgt .submit:hover {
+	background: url(../bundles/tshoktrade/img/creditline/request.png) -20px -14px;
+}
+.reveal-modal .cl_buttons_wgt .submit_click {
+	background: url("../bundles/tshoktrade/img/creditline/request.png") -20px -166px transparent;
+}
+.reveal-modal .cl_btn_request {
+	background: red url('../bundles/tshoktrade/img/creditline/request.png');
+	width: 250px;
+	height: 76px;
+}
+.reveal-modal .cl_logopartners {
+	position: absolute;
+	top: 355px;
+	left: 0px;
+	padding: 10px;
+}
+#CLcalc .cl_logopartners {
+	padding: 10px 0px 10px 0px;
+}
+.reveal-modal .cl_logopartners.big {
+	top: 647px;
+	left: 0px;
+	width: 467px;
+	padding: 15px 10px 10px 25px;
+}
+.cl_logopartners .logo_partner_1 {
+	float: left;
+	width: 150px;
+	height: 35px;
+	background: url('../bundles/tshoktrade/img/creditline/logo_partners.png') 0px 0px no-repeat;
+	/* margin-right: 40px; */
+}
+.cl_logopartners .logo_partner_2 {
+	float: left;
+	width: 150px;
+	height: 35px;
+	background: url('../bundles/tshoktrade/img/creditline/logo_partners.png') 0px -70px no-repeat;
+}
+/* .cl_logopartners .logo_partner_3 {
+	float: left;
+	width: 150px;
+	height: 35px;
+	background: url('../bundles/tshoktrade/img/creditline/logo_partners.png') 0px -35px no-repeat;
+	margin-right: 40px;
+} */
+.cl_logopartners .logo_partner_4 {
+	float: left;
+	width: 150px;
+	height: 35px;
+	background: url('../bundles/tshoktrade/img/creditline/logo_partners.png') 0px -105px no-repeat;
+}
+.reveal-modal .cl_header {
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 34px;
+	padding: 5px 0px 0px 25px;
+	font-weight: normal;
+}
+.cl_label {
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 18px;
+	/*padding: 0px 0px 10px 25px;*/
+	font-weight: normal;
+	/*color: #585858;*/
+	text-align: left;
+}
+.reveal-modal .cl_credit_sum {
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 20px;
+	padding: 5px 10px;
+	font-weight: normal;
+	background: #efefef;
+	position: absolute;
+	top: 85px;
+	left: 270px;
+}
+#CLcalc .cl_credit_sum {
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 20px;
+	padding: 5px 10px;
+	font-weight: normal;
+	background: #efefef;
+	/*position: absolute;
+	top: 5px;
+	left: 270px;*/
+	display: inline-block;
+	width: 115px;
+	margin-left: 55px;
+}
+.reveal-modal .cl_label.mnt {
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 18px;
+	padding: 0px 0px 0px 25px;
+	font-weight: normal;
+	color: #585858;
+}
+.reveal-modal .cl_credit_sum.mnt {
+	top: 360px;
+	background: #E0E0E0;
+}
+#CLcalc .cl_credit_sum.mnt {
+	top: 275px;
+	left: 250px;
+	background: #E0E0E0;
+}
+.cl_ldelimiter {
+	padding: 20px 0px 0px;
+}
+.reveal-modal .cl_premx {
+	padding: 15px;
+}
+.reveal-modal #cl_form_request {
+	padding: 0px 0px 15px 0px;
+}
+::-webkit-input-placeholder {
+	color: #eee;
+	font:14px Arial, 'HelveticaNeueCyr', "Nimbus Sans L", sans-serif;
+}
+:-moz-placeholder {
+	color: #eee;
+	font:14px Arial, 'HelveticaNeueCyr', "Nimbus Sans L", sans-serif;
+}
+.placeholder {
+	color: #eee;
+	font:14px Arial, 'HelveticaNeueCyr', "Nimbus Sans L", sans-serif;
+}
+noindex:-o-prefocus,.reveal-modal .cl_header {
+	/* padding-top: 25px;*/
+}
+@-moz-document url-prefix() {
+	.reveal-modal .cl_buttons_wgt {margin-top: -15px;}
+	.reveal-modal .cl_premx { padding: 7px; }
+}
+.reveal-modal input {
+	background: #fff;
+	border: 1px solid #c0cad5;
+	color: #6c6b6b;
+	font-size: 16px;
+}
+.reveal-modal input[type=text], .reveal-modal textarea {
+	outline: none;
+	padding: 8px;
+	margin: 5px;
+	background: url('../bundles/tshoktrade/img/creditline/bg_input_top.gif') top repeat-x;
+	border: none;
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #f0f0f0;
+}
+.reveal-modal .field-over {
+	border-color:#56b4ef;
+	box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+}
+.reveal-modal .field-over-error {
+	border-color:#FF9B9B;
+	box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(255,0,0,.6);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(255,0,0,.6);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(255,0,0,.6);
+}
+.reveal-modal .checkbox {
+	vertical-align: middle;
+	width: 16px;
+	height: 12px;
+	background: url(../bundles/tshoktrade/img/creditline/checkbox.png) no-repeat;
+	cursor: pointer;
+}
+.reveal-modal .checkbox.checked {
+	background-position: -16px 0;
+}
+.reveal-modal label {
+	cursor: pointer;
+}
+.reveal-modal #cl_sl, .reveal-modal #cl_sl2 {
+	width: 444px;
+	height: auto;
+	margin: 25px auto 0;
+	position: relative;
+	padding-bottom: 60px;
+}
+#CLcalc   #cl_sl3, #CLcalc   #cl_sl4 {
+	width: 444px;
+	height: auto;
+	margin: 25px auto 0 0;
+	position: relative;
+	padding-bottom: 60px;
+}
+.reveal-modal #slider, .reveal-modal #slider2, #CLcalc  #slider3, #CLcalc  #slider4 {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #333 #333 #777 #333;
+	border-radius: 25px;
+	width: 444px;
+	position: absolute;
+	height: 6px;
+	padding: 0px;
+	margin: 0px;
+	background-color: #8e8d8d;
+	background: url('../bundles/tshoktrade/img/creditline/bg-track.png') repeat top left;
+	box-shadow: inset 0 1px 5px 0px rgba(0, 0, 0, .5),
+	0 1px 0 0px rgba(250, 250, 250, .5);
+}
+.reveal-modal .tooltip, .reveal-modal .tooltip2, #CLcalc  .tooltip3, #CLcalc  .tooltip4 {
+	position: absolute;
+	display: block;
+	z-index: 999;
+	top: 11px;
+	width: 109px;
+	height: 37px;
+	color: #fff;
+	text-align: center;
+	font: 10pt Tahoma, Arial, sans-serif;
+	background: url('../bundles/tshoktrade/img/creditline/tooltip.png') top no-repeat;
+	padding-top:15px;
+	text-shadow: 1px 1px 2px #247168, 0 0 1em #247168;
+}
+#CLcalc {
+	width: 450px;
+	position: relative;
+	padding: 10px 28px 10px 28px;
+	text-align: left;
+}
+.reveal-modal .ui-slider-handle, #CLcalc  .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background: url('../bundles/tshoktrade/img/creditline/handle.png') no-repeat 50% 50% !important;
+	font-weight: bold;
+	color: #1C94C4;
+	outline: none;
+	top: -8px;
+	margin-left: -12px;
+	border: none;
+}
+.reveal-modal .ui-slider-range, #CLcalc .ui-slider-range {
+	background: url('../bundles/tshoktrade/img/creditline/range.png');
+	position: absolute;
+	border: 0;
+	top: -1px;
+	left: -2px;
+	height: 8px;
+	border-radius: 25px;
+	border-color:#56b4ef;
+	box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+}
+.reveal-modal .values, .reveal-modal .values2, #CLcalc .values, #CLcalc .values2 {
+	position: absolute;
+	top: -20px;
+	color: #999;
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 13px;
+	font-weight: 100;
+}
+.reveal-modal .val_slider, #CLcalc .val_slider {
+	height: 15px;
+	position: absolute;
+	width: 50px;
+}
+.reveal-modal .delimiters, .reveal-modal .delimiters2, #CLcalc .delimiters, #CLcalc .delimiters2 {
+	position: absolute;
+	top: 8px;
+}
+.reveal-modal .val_slider_grm, #CLcalc .val_slider_grm {
+	position:absolute;
+	background: url('../bundles/tshoktrade/img/creditline/delimiter.png') -1px;
+	width: 1px;
+	height: 10px;
+}
+.reveal-modal .val_slider_grm_min, #CLcalc .val_slider_grm_min {
+	position:absolute;
+	background: url('../bundles/tshoktrade/img/creditline/delimiter.png');
+	width: 1px;
+	height: 5px;
+}
+.reveal-modal .sogl {
+	color: #7e7e7e;
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 15px;
+	font-weight: 100;
+}
+.reveal-modal .sogl:hover {
+	border-bottom: 1px dotted #b9b9b9;
+}
+@font-face {
+	font-family: HelveticaNeueCyr;
+	src: url("../font/HelveticaNeueCyr-Medium.otf") format("opentype");
+}
+@font-face {
+	font-family: HelveticaNeueCyr;
+	font-weight: bold;
+	src: url("../font/HelveticaNeueCyr-Bold.otf") format("opentype");
+}
+@font-face {
+	font-family: HelveticaNeueCyr;
+	font-weight: 100;
+	src: url("../font/HelveticaNeueCyr-Light.otf") format("opentype");
+}
+.reveal-modal .cl-link {
+	font-family: 'HelveticaNeueCyr', 'Myriad Pro';
+	font-size: 16px;
+	text-decoration: none;
+}
+.reveal-modal .cl-link:hover {
+	text-decoration: underline;
+}
+.reveal-modal .btn_request {
+	background: url(../bundles/tshoktrade/img/creditline/request.png) 0px -76px;
+	width: 250px;
+	height: 76px;
+	position: relative;
+}
+.reveal-modal .btn_request.over {
+	background: url(../bundles/tshoktrade/img/creditline/request.png) 0px 0px;
+}
+.reveal-modal .btn_request.click {
+	background: url(../bundles/tshoktrade/img/creditline/request.png) 0px -152px;
+}
+:root .cl_buttons_wgt {
+	margin-top: -10px;
+}
+@media \0screen {
+	.cl_header {
+		margin-top: 15px;
+	}
+	.cl_buttons_wgt {
+		margin-top: -15px;
+	}
+}
+*+html .cl_buttons_wgt {
+	margin-top: -35px;
+}
+*+html  .cl_header {
+	margin-top: 20px;
+}
+*+html  .cl_premx {
+	padding: 3px !important;
+}
+
+#CLcalc p {
+	line-height: 21px;
+}
+
+#CLcalc .btn-warning {
+	float: right;
+}
+
+#CLcalc .control-group {
+	width: 450px;
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+
+.basket-block-item .info-msg {
+	margin-top: 10px;
+}

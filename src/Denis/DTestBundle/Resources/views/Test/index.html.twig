@@ -1,0 +1,21 @@
+{% extends "DenisDTestBundle::layout.html.twig" %}
+
+{% block title %}
+    Список тестов
+{% endblock %}
+
+{% block content %}
+
+	{% if error %}<p style="color: red;">{{ error }}</p>{% endif %}
+
+	{% if data|length %}
+	    <ul>
+	    {% for item in data %}
+	        <li><a href="{{ path('test_page', {'id' : item.id}) }}">{{ item.name }}</a></li>
+	    {% endfor %}
+	    </ul>
+	{% else %}
+		<p style="color: red;">Доступных тестов не найдено!</p>
+	{% endif %}
+
+{% endblock %}

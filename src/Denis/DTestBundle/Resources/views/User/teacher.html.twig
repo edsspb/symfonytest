@@ -1,0 +1,31 @@
+{% extends "DenisDTestBundle::layout.html.twig" %}
+
+{% block title %}
+   Преподаватель - {{ user.getUsername() }}
+{% endblock %}
+
+{% block content %}
+
+   	<table>
+   		<tr>
+   			<td><strong>Ваше имя: </strong></td>
+   			<td>{{ user.getUsername() }}</td>
+   		</tr>
+   		<tr>
+   			<td><strong>Email: </strong></td>
+   			<td>{{ user.getEmail() }}</td>
+   		</tr>
+   	</table>
+
+   	{% if tests|length %}
+   		<p><strong>Тесты ожидающие проверки</strong></p>
+   		<ul>
+   			{% for test in tests %}
+               {% for item in test.usersTests %}
+   				  <li><a href="{{ path('test_checking', {'id' : item.id, 'usersid' : item.users.id}) }}">{{ test.name }} Пользователь: {{ item.users.username }}</a></li>
+               {% endfor %}
+   			{% endfor %}
+   		</ul>
+   	{% endif %}
+
+{% endblock %}

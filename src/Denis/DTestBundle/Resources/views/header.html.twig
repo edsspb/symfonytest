@@ -1,0 +1,13 @@
+<hr color="#ccc" />
+{% if app.security.token.roles is not empty %}
+	{% if app.security.isGranted('ROLE_ADMIN') %}
+		<a href="{{ path('admin_logout') }}">Выход</a> | <a href="{{ path('admin_main') }}">Главная</a>
+	{% elseif app.security.isGranted('ROLE_TEACHER') %}
+		<a href="{{ path('logout') }}">Выход</a> | <a href="{{ path('teacher_main') }}">Главная</a>
+	{% elseif app.security.isGranted('ROLE_USER') %}
+		<a href="{{ path('logout') }}">Выход</a> | <a href="{{ path('user_main') }}">Главная</a>
+	{% else %}
+		<a href="{{ path('logout') }}">Выход</a>
+	{% endif %}
+	<hr color="#ccc" />
+{% endif %}

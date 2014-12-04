@@ -1,0 +1,4 @@
+denis_d_test_routers:
+    resource: "@DenisDTestBundle/Controller"
+    type:     annotation
+    prefix:   /

@@ -1,0 +1,17 @@
+{% extends "DenisDTestBundle::layout.html.twig" %}
+
+{% block title %}
+    Авторизация
+{% endblock %}
+
+{% block content %}
+    {% if errors %}
+	    <p style="color: red;">{{ errors.message }}</p>
+	{% endif %}
+	{% if form_errors|length %}
+		{% for error in form_errors %}
+	    	<p style="color: red;">{{ error.getMessage() }}</p>
+		{% endfor %}
+	{% endif %}
+	{{ form(form) }}
+{% endblock %}

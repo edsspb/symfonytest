@@ -1,0 +1,17 @@
+{% extends "DenisDTestBundle::layout.html.twig" %}
+
+{% block title %}
+    Административная панель | вопросы
+{% endblock %}
+
+{% block content %}
+	<p><a href="{{ path('admin_tests') }}">Тесты</a></p>
+	<p>Редактировать вопросы:</p>
+    <ul>
+    	{% for test in tests %}
+    		<li><a href="{{ path('admin_questions', {'id' : test.id}) }}">{{ test.name }}</a></li>
+    	{% endfor %}
+    </ul>
+    <hr color="#ccc" />
+    <p>Создать новый вопрос:</p>
+{% endblock %}

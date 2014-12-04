@@ -1,0 +1,45 @@
+{% extends "DenisDTestBundle::layout.html.twig" %}
+
+{% block title %}
+    Административная панель | тесты
+{% endblock %}
+
+{% block content %}
+	{% if error %}<p style="color: red;">{% for msg in error %} {{ msg }} {% endfor %}</p>{% endif %}
+
+	<p>Редактировать тесты:</p>
+    <ul>
+    	{% for test in tests %}
+    		<li>
+    			<a href="{{ path('admin_tests', {'id' : test.id}) }}">{{ test.name }} (редактировть)</a> 
+    			<a href="{{ path('admin_delete_obj', {'obj' : 'Tests', 'id' : test.id}) }}">(удалить)</a> 
+    		</li>
+    	{% endfor %}
+    </ul>
+    <hr color="#ccc" />
+    {% if test.getId() %}
+    	<p>Редактиоовать тест <strong>{{ test.getName() }}</strong>:</p>
+    {% else %}
+    	<p>Создать новый тест:</p>
+    {% endif %}
+    {{ form(testform) }}
+
+    {% if test.getQuestions()|length %}
+    	<p>Вопросы:</p>
+    	<ul>
+	    	{% for question in test.getQuestions() %}
+	    		<li>
+	    			<a href="{{ path('admin_tests', {'id' : test.id, 'qid' : question.getId()}) }}">{{ question.getName() }} (редактировть)</a> 
+	    			<a href="{{ path('admin_delete_obj', {'obj' : 'Questions', 'id' : question.getId(), 'pid' : test.getId()}) }}">(удалить)</a> 
+	    			<a href="{{ path('admin_answers', {'id' : question.getId()}) }}">(редактировать ответы)</a> 
+	    		</li>
+	    	{% endfor %}
+    	</ul>
+    {% endif %}
+
+    {% if test.getId() %}
+    	<p>Создать / редактировать вопрос для теста "{{ test.getName() }}":</p>
+    	{{ form(questionform) }}
+    {% endif %}
+
+{% endblock %}

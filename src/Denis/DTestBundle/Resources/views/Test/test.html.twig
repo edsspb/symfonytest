@@ -1,0 +1,19 @@
+{% extends "DenisDTestBundle::layout.html.twig" %}
+
+{% block title %}
+    Тест: &laquo;{{ test[0].name }}&raquo;
+{% endblock %}
+
+{% block content %}
+
+	{% if error %}<p style="color: red;">{{ error }}</p>{% endif %}
+
+	<p><a href="{{ path('test_main') }}">Список тестов</a></p>
+
+	<p><strong>{{ test[0].name }}</strong></p>
+
+	{{ form(form) }}
+
+	<p><a href="{{ path('test_main') }}">Список тестов</a></p>
+
+{% endblock %}
