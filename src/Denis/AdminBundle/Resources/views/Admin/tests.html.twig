@@ -17,12 +17,14 @@
     	{% endfor %}
     </ul>
     <hr color="#ccc" />
-    {% if test.getId() %}
-    	<p>Редактиоовать тест <strong>{{ test.getName() }}</strong>:</p>
-    {% else %}
-    	<p>Создать новый тест:</p>
+    {% if testform is not null %}
+	    {% if test.getId() %}
+	    	<p>Редактиоовать тест <strong>{{ test.getName() }}</strong>:</p>
+	    {% else %}
+	    	<p>Создать новый тест:</p>
+	    {% endif %}
+    	{{ form(testform) }}
     {% endif %}
-    {{ form(testform) }}
 
     {% if test.getQuestions()|length %}
     	<p>Вопросы:</p>
@@ -37,7 +39,7 @@
     	</ul>
     {% endif %}
 
-    {% if test.getId() %}
+    {% if questionform is not null %}
     	<p>Создать / редактировать вопрос для теста "{{ test.getName() }}":</p>
     	{{ form(questionform) }}
     {% endif %}
